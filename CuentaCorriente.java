@@ -1,39 +1,18 @@
 
-package U07_A01;
+package U07_A02;
 
-import java.util.Scanner;
 public class CuentaCorriente {
     String nombre;
     String dni;
     double saldo;
-    Scanner sc = new Scanner(System.in);
     
-    CuentaCorriente (String nombre, String dni) {
+    CuentaCorriente (String nombre, String dni, double saldo) {
         this.nombre = nombre;
         this.dni = dni;
+        this.saldo = saldo;
     }
-    public boolean sacarDinero(double cantidad) {
-        System.out.print("Introduce una cantidad: ");
-        cantidad = sc.nextDouble();
-        if (cantidad > 0 && cantidad <= saldo) {
-            saldo -= cantidad;
-            System.out.println("Cantidad restante: " + saldo);
-            return true;
-        } else {
-            System.out.println("Operación fallida");
-            return false;
-        }
-    }
-    public double ingresarDinero(double cantidad) {
-        System.out.print("Introduce una cantidad: ");
-        cantidad = sc.nextDouble();
-        if (cantidad > 0) {
-            saldo += cantidad;
-            System.out.println("Saldo: " + saldo);
-        } else {
-            System.out.println("Operación fallida");
-        }
-        return saldo;
+    CuentaCorriente (String dni, double saldo) {
+        this("", dni, saldo);
     }
     public void mostrarInformacion() {
         System.out.println("Nombre del titular: " + nombre);
