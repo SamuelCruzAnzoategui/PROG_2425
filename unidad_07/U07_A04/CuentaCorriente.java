@@ -48,7 +48,6 @@ public class CuentaCorriente {
         this.banco = banco;
     }
     public void mostrarBanco() {
-        getBanco();
         System.out.println("Nomnbre del banco: " + banco);
         System.out.print("¿Desea cambiar el nombre del banco? ");
         String nombreBanco = sc.nextLine();
@@ -56,7 +55,6 @@ public class CuentaCorriente {
         if ("si".equals(nombreBanco)) {
             System.out.print("Introduce el nombre del banco: ");
             banco = sc.nextLine();
-            setBanco(banco);
         }
     }
 }

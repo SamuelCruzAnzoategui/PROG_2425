@@ -21,7 +21,7 @@ public class Main {
             System.out.println("Sacar dinero = 3");
             System.out.println("Mostrar banco = 4");
             System.out.println("Salir = 0");
-            System.out.print("Selecciona una opción (0 - 3): ");
+            System.out.print("Selecciona una opción (0 - 4): ");
             opcion = sc.nextInt();
             System.out.println("------------------------");
         
